@@ -1,0 +1,139 @@
+from tkinter import *
+import tkinter.messagebox as tkMessageBox
+import random
+import time;
+import datetime
+
+root = Tk()
+root.geometry("1350x600+0+0")
+root.title("CONSULTA CARTORIO")
+root.configure(bg='blue')
+
+# ==================================== FRAME PRINCIPAL ESQUERDA / DIREITO  =============================================
+
+EsquerdaMainFrame = Frame (root, width = 1000 , height = 650 , bd = 1 , relief ="raise")
+EsquerdaMainFrame.pack(side = LEFT)
+
+DireitaMainFrame = Frame (root, width = 350 , height = 650 , bd = 1 , relief ="raise")
+DireitaMainFrame.pack(side = RIGHT)
+
+# =============================================== FRAME TITULO =========================================================
+
+EsquerdaMainFrame0 = Frame (EsquerdaMainFrame, bg = "blue" , width = 650, height = 350, bd = 1 , relief ="raise" )
+EsquerdaMainFrame0.pack(side = TOP)
+lblTitle = Label( EsquerdaMainFrame0, font = ( " arial" , 55 , "bold") , text = "CONSULTA CARTORIO ", bd = 8 , bg ='lightskyblue')
+lblTitle.grid(row = 0 , column = 0 , sticky = W )
+
+# ================================== FRAME SECUNDARIO  DA ESQUERDA  / DIREITO ==========================================
+
+EsquerdaMainFrame1 = Frame (EsquerdaMainFrame, width = 1000 , height = 1000  , bd = 8 , relief ="raise")
+EsquerdaMainFrame1.pack(side = TOP)
+
+EsquerdaMainFrame2 = Frame (EsquerdaMainFrame, width = 1000 , height = 1000 , bd = 8 , relief ="raise")
+EsquerdaMainFrame2.pack(side = TOP)
+
+
+EsquerdaMainFrame4 = Frame (EsquerdaMainFrame, width = 1000 , height =550 , bd = 8 , relief ="raise")
+EsquerdaMainFrame4.pack(side = TOP)
+
+DireitaMainFrame1 = Frame (DireitaMainFrame, width = 350, height = 295, bd = 8 , relief ="raise")
+DireitaMainFrame1.pack(side = TOP)
+
+DireitaMainFrame2 = Frame (DireitaMainFrame, width = 380 , height = 295 , bd = 8, relief ="raise")
+DireitaMainFrame2.pack(side = BOTTOM)
+
+# ============================================ BOTÕES CADASTRAR ===========================================
+def Confirmar():
+    Confirmar.txtNomeID.insert()
+
+# ============================================ BOTÕES I
+# ===========================================
+
+
+
+#========================================================Imprimir===================================
+def retrive_imput():
+    imputValue = txtConfirmar.get
+    print(imputValue)
+
+# ============================================ CAMPO FRAME DE CIMA / PRIMEIRO===========================================
+
+lblNomeID = Label( EsquerdaMainFrame1, font = ( " arial" , 11 , "bold") , text = "NOME DO CLIENTE" , bd = 8)
+lblNomeID.grid(row = 0 , column = 0 , sticky = W )
+txtNomeID = Entry (EsquerdaMainFrame1, font = ("arial" , 10 , "bold"), bd = 1 , width = 53 , justify = "left")
+txtNomeID.grid(row = 0 , column = 1 )
+
+
+lblCEPID = Label( EsquerdaMainFrame1, font = ( " arial" , 11 , "bold") , text = "CEP" , bd = 8)
+lblCEPID.grid(row = 3 , column = 4 , sticky = W )
+txtClienteID = Entry (EsquerdaMainFrame1, font = ("arial" , 10 , "bold"), bd = 1 , width = 53 , justify = "left")
+txtClienteID.grid(row = 3 , column = 5 )
+
+lblEnderecoID = Label( EsquerdaMainFrame1, font = ( " arial" , 11 , "bold") , text = "ENDEREÇO" , bd = 8)
+lblEnderecoID.grid(row = 3 , column = 0 , sticky = W )
+txtEnderecoID = Entry (EsquerdaMainFrame1, font = ("arial" , 10 , "bold"), bd = 1 , width = 53 , justify = "left")
+txtEnderecoID.grid(row = 3 , column = 1 )
+
+lblCidadeID = Label( EsquerdaMainFrame1, font = ( " arial" , 11 , "bold") , text = "CIDADE" , bd = 8)
+lblCidadeID.grid(row = 1 , column = 0 , sticky = W )
+txtCidadeID = Entry (EsquerdaMainFrame1, font = ("arial" , 10 , "bold"), bd = 1 , width = 53 , justify = "left")
+txtCidadeID.grid(row = 1 , column = 1 )
+
+
+lblEstadoID = Label( EsquerdaMainFrame1, font = ( " arial" , 11 , "bold") , text = "ESTADO "  , bd = 8)
+lblEstadoID.grid(row = 1, column = 4 , sticky = W )
+txtEstadoID = Entry (EsquerdaMainFrame1, font = ("arial" , 10 , "bold"), bd = 1 , width = 50 , justify = "left")
+txtEstadoID.grid(row = 1 , column = 5 )
+
+
+
+# ============================================ CAMPO FRAME DO MEIO / SEGUNDO ===========================================
+
+lblfinanID = Label( EsquerdaMainFrame2, font = ( " arial" , 11 , "bold") , text = " TIPO FINANCIAMENTO" , bd = 6)
+lblfinanID.grid(row = 0 , column = 0 , sticky = W )
+txtfinanID = Entry (EsquerdaMainFrame2, font = ("arial" , 10 , "bold"), bd = 1 , width = 46 , justify = "left")
+txtfinanID.grid(row = 0 , column = 1 )
+
+lblgarantiaID = Label( EsquerdaMainFrame2, font = ( " arial" , 11 , "bold") , text = " TIPO DE GARANTIA" , bd = 6)
+lblgarantiaID.grid(row = 3 , column = 4 , sticky = W )
+txtgarantiaID = Entry (EsquerdaMainFrame2, font = ("arial" , 10 , "bold"), bd = 1 , width = 46 , justify = "left")
+txtgarantiaID.grid(row = 3 , column = 5 )
+
+lblform_garantiaID = Label( EsquerdaMainFrame2, font = ( " arial" , 11 , "bold") , text = "FORMA GARANTIA" , bd = 6)
+lblform_garantiaID.grid(row = 1 , column = 0 , sticky = W )
+txtform_garantiaID = Entry (EsquerdaMainFrame2, font = ("arial" , 10 , "bold"), bd = 1 , width = 46 , justify = "left")
+txtform_garantiaID.grid(row = 1 , column = 1 )
+
+lblbem_adquiridoID = Label( EsquerdaMainFrame2, font = ( " arial" , 11 , "bold") , text = "BEM ADQUIRIDO" , bd = 6)
+lblbem_adquiridoID.grid(row = 1 , column =  4, sticky = W )
+txtbem_adquiridoID = Entry (EsquerdaMainFrame2, font = ("arial" , 10 , "bold"), bd = 2 , width = 46 , justify = "left")
+txtbem_adquiridoID.grid(row = 1 , column = 5 )
+
+lblvalor_garantiaID = Label( EsquerdaMainFrame2, font = ( " arial" , 11 , "bold") , text = "VALOR DA GARANTIA" , bd = 8)
+lblvalor_garantiaID.grid(row = 3, column = 0, sticky = W )
+txtvalor_garantiaID = Entry (EsquerdaMainFrame2, font = ("arial" , 10 , "bold"), bd = 1 , width = 46 , justify = "left")
+txtvalor_garantiaID.grid(row = 3 , column = 1 )
+
+
+#  =======================================  CAMPO BOTÕES DE RODAPE =====================================================
+
+cmdCadastrar = Button(EsquerdaMainFrame4 , text = "INSERIR" , padx = 4 , bd = 2 , fg = "black" , bg = "yellow" , font = ("arial" , 10 , "bold") , width = 18 , height = 3 ).grid(row = 0 , column = 0 )
+
+cmdInserir = Button(EsquerdaMainFrame4 , text = "CONFIRMAR" , padx = 4 , bd = 2 , fg = "black" , bg = "yellow" , font = ("arial" , 10 , "bold") , width = 18 , height = 3, ).grid(row = 0 , column = 1 )
+
+cmdimpar = Button(EsquerdaMainFrame4 , text = "LIMPAR" , padx = 4 , bd = 2 , fg = "black" , bg = "yellow" , font = ("arial" , 10 , "bold") , width = 18 , height = 3 ).grid(row = 0 , column = 2 )
+
+cmdSair = Button(EsquerdaMainFrame4 , text = "SAIR" , padx = 4 , bd = 2 , fg = "black" , bg = "yellow"  ,font = ("arial" , 10 , "bold") , width = 18 , height = 3 ).grid(row = 0 , column = 3 )
+
+cmdImprimir = Button(EsquerdaMainFrame4 , text = "IMPRIMIR" , padx = 4 , bd = 2, fg = "black" , bg = "yellow" , font = ("arial" , 10 , "bold") , width = 18 , height = 3 ).grid(row = 0 , column = 4 )
+
+#  ===========================================  CAMPO  DO FRAME  DA DIRIETA TOP ========================================
+style=Checkbutton(DireitaMainFrame1,text='REGISTROS\t\t\t',onvalue=1,offvalue=0,bg='lightskyblue',font=('arial',12,'bold')).grid(row=0,sticky=W)
+style=Checkbutton(DireitaMainFrame1,text='REGISTROS DE TITULOS DOCUMENTOS\t\t\t',onvalue=1,offvalue=0,bg='lightskyblue',font=('arial',12,'bold')).grid(row=1,sticky=W)
+style=Checkbutton(DireitaMainFrame1,text='REGISTROS DE IMOVEIS\t\t\t',onvalue=1,offvalue=0,bg='lightskyblue',font=('arial',12,'bold')).grid(row=2,sticky=W)
+style=Checkbutton(DireitaMainFrame1,text='REGISTRO CIVIL\t\t\t',onvalue=1,offvalue=0,bg='lightskyblue',font=('arial',12,'bold')).grid(row=3,sticky=W)
+
+#  =======================================  CAMPO BOTÕES DE RODAPE =====================================================
+
+
+root.mainloop()
